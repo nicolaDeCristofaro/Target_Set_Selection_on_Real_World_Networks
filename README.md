@@ -23,16 +23,18 @@ This small number of individuals that constitutes the target set are called **se
 # Formalization of the problem
 **Instance:**
 - Given G = (V,E) a graph that models the network
-- Given the following function: <br>
-    <img src="https://latex.codecogs.com/svg.image?t&space;:&space;V&space;\rightarrow&space;\mathbb{N}_{0}&space;=&space;\left\{&space;0,1,...&space;\right\}" title="t : V \rightarrow \mathbb{N}_{0} = \left\{ 0,1,... \right\}" /><br>
-   it assigns **tresholds** to the vertices of G. *What do the thresholds represent?* For each node v ∈ V, the value **t(v)** quantifies how hard it is to influence node v, in the sense that easy-to-influence nodes of the network have “low” threshold values, and hard-to-influence nodes have “high” threshold values.
+- Given the function <img src="https://latex.codecogs.com/svg.image?t&space;:&space;V&space;\rightarrow&space;\mathbb{N}_{0}&space;=&space;\left\{&space;0,1,...&space;\right\}" title="t : V \rightarrow \mathbb{N}_{0} = \left\{ 0,1,... \right\}" /> assigning **tresholds** to the vertices of G. 
+   
+   *What do the thresholds represent?* For each node v ∈ V, the value **t(v)** quantifies how hard it is to influence node v, in the sense that easy-to-influence nodes of the network have “low” threshold values, and hard-to-influence nodes have “high” threshold values.
 
 **Problem:**
 *Find a target set S ⊆ V of minimum size for G*
 Dato un grafo non direzionato G=(V,E)
 
 # Software Used
+- <b> Python language</b> 
 
+- <b> Snap.py (SNAP for Python) </b>: Stanford Network Analysis Platform (SNAP) is a general purpose network analysis and graph mining library. It efficiently manipulates large graphs, calculates structural properties, generates regular and random graphs, and supports attributes on nodes and edges. For details [https://snap.stanford.edu/index.html](https://snap.stanford.edu/index.html)
 
 # Datasets
 

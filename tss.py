@@ -2,8 +2,8 @@ import snap
 
 from tss_utils import *
 
-path = './Datasets/twitch/ENGB/musae_ENGB_edges.csv'
-#path = './Datasets/git_web_ml/musae_git_edges.csv'
+#path = './Datasets/twitch/ENGB/musae_ENGB_edges.csv'
+path = './Datasets/git_web_ml/musae_git_edges.csv'
 
 G = snap.LoadEdgeList(snap.TUNGraph, path, 0, 1, ',')
 
