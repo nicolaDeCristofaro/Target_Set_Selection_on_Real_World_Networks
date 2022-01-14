@@ -27,7 +27,7 @@ def degree_based_edge_probability_distribution(graph, edge):
 
 
 #edges removals based on probability
-def edge_filtering(graph, propability_function, const):
+def edge_filtering(graph, propability_function, **kwargs):
     edges_to_remove = []
 
     if propability_function == "random":
@@ -36,6 +36,7 @@ def edge_filtering(graph, propability_function, const):
                 edges_to_remove.append((e.GetSrcNId(),e.GetDstNId()))
     elif propability_function == "constant":
         for e in graph.Edges():
+            const = kwargs.get("const", None)
             if const < rand.uniform(0,1):
                 edges_to_remove.append((e.GetSrcNId(),e.GetDstNId()))
     elif propability_function == "degree_based":
