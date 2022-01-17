@@ -6,8 +6,7 @@ def print_graph_basic_info(graph):
 	print("Number of edges = {}".format(graph.GetEdges()))
 
 def print_graph_deg_info(graph):
-	print("Max Node Degree = {}".format(get_graph_avg_degree(graph)))
-	print("Max Node Degree = {}".format(graph.GetClustCf()))
+	print("Max Node Degree = {}".format(graph.GetNI(graph.GetMxDegNId()).GetDeg()))
 
 def get_graph_avg_degree(graph):
     degSum = 0
@@ -76,56 +75,42 @@ def threshold_setting(graph, threshold_function, a,b):
 #TSS algorithm
 def target_set_selection(graph, node_threshold_mapping):
     S = set()
-    already_active_set = set()
+    node_id_to_delete = 0
+
     while graph.GetNodes() > 0:
-        max_node_id = -1
-        max_ratio_value = -1
-        node_id_to_add_to_ts = None
-
-        for v in graph.Nodes():
-            #if exists a node with threshold == 0 it is already active so It influences other nodes in its neighbourhood
-            #and then delete it from the network 
-            if node_threshold_mapping[v.GetId()] == 0: 
-                already_active_set.add(v.GetId())
-            else:
-                if v.GetDeg() < node_threshold_mapping[v.GetId()]:
-                    #it exists a node that has the degree < of its threshold
-                    #so add it to the target set S because having a few link nobody can influence it
-                    #and then delete it from the network 
-                    node_id_to_add_to_ts = v.GetId()
-                else:
-                    #pick a nod v with the selected criteria, decrement of 1 its threshold neighborhoods
-                    #and then delete it from the network
-                    denominator = v.GetDeg()*(v.GetDeg()+1)
-                    if denominator == 0: ratio = 0
-                    else: ratio = node_threshold_mapping[v.GetId()] / denominator
-                    if ratio > max_ratio_value:
-                        max_node_id = v.GetId()
-                        max_ratio_value = ratio
-        
-        ##update thresholds
-        if(len(already_active_set) > 0):
-            while(len(already_active_set) > 0):
-                node_id = already_active_set.pop()
-                _,NodeVec = graph.GetNodesAtHop(node_id, 1, False) #get node's neighborhood
+        U = graph.Nodes()
+        for v in U:
+            if node_threshold_mapping[v.GetId()] == 0: #Case1
+                node_id_to_delete = v.GetId()
+                _,NodeVec = graph.GetNodesAtHop(v.GetId(), 1, False) #get node's neighborhood
                 for item in NodeVec:
                     #decrement of 1 the threshold of neighbors nodes still inactive
                     if node_threshold_mapping[item] > 0: node_threshold_mapping[item] -= 1
-                
-                graph.DelNode(node_id)
-        
-        else:
-            if node_id_to_add_to_ts != None:
-                S.add(node_id_to_add_to_ts)
-                _,NodeVec = graph.GetNodesAtHop(node_id_to_add_to_ts, 1, False) #get node's neighborhood
-                for item in NodeVec:
-                    #decrement of 1 the threshold of neighbors nodes still inactive
-                    if node_threshold_mapping[item] > 0: node_threshold_mapping[item] -= 1
-
-                graph.DelNode(node_id_to_add_to_ts)
+                break
             else:
-                graph.DelNode(max_node_id)
+                if v.GetDeg() < node_threshold_mapping[v.GetId()]: #Case2
+                    S.add(v.GetId())
+                    node_id_to_delete = v.GetId()
+                    _,NodeVec = graph.GetNodesAtHop(v.GetId(), 1, False) #get node's neighborhood
+                    for item in NodeVec:
+                        #decrement of 1 the threshold of neighbors nodes still inactive
+                        if node_threshold_mapping[item] > 0: node_threshold_mapping[item] -= 1
+                    break
+                else: #Case3
+                    max_ratio_value = -1
+                    max_node_id = -1
+                    for u in U:
+                        denominator = u.GetDeg()*(u.GetDeg()+1)
+                        if denominator == 0: ratio = 0
+                        else: ratio = node_threshold_mapping[u.GetId()] / denominator
+                        if ratio > max_ratio_value:
+                            max_node_id = u.GetId()
+                            max_ratio_value = ratio
+                    node_id_to_delete = max_node_id
+                    break
 
+        graph.DelNode(node_id_to_delete)
+    
     return S
 
 

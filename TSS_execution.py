@@ -1,6 +1,7 @@
 import snap
 import sys
-import os
+import time
+import copy
 
 from TSS_utils import *
 
@@ -13,7 +14,7 @@ treshold_function = "degree_based"
 tresholds_coeff = [1, 2]
 
 if len(sys.argv) == 6 or len(sys.argv) == 7:
-    print("\n TSS Execution")
+    print("\nTSS Execution")
     datasetPath = sys.argv[1]
     prob_function = sys.argv[2]
     if prob_function == "constant":
@@ -34,35 +35,37 @@ else:
 
 # Load graph
 G = snap.LoadEdgeList(snap.TUNGraph, datasetPath, 0, 1, ',')
-print("\n Original Graph Info:")
+print("\nOriginal Graph Info:")
 print_graph_basic_info(G)
+print_graph_deg_info(G)
 print_graph_extra_info(G)
 
-print("\n *Edges pre-computation...")
+print("\n*Edges pre-computation...")
+startTime = time.time()
 if prob_function == "constant":
     edge_filtering(G, "constant", const=prob_const)
 else:
     edge_filtering(G, prob_function)
+print(f"Time taken: {round(time.time()-startTime, 2)} s")
 
-print("\n Graph Info after edges pre-computation:")
+print("\nGraph Info after edges pre-computation:")
 print_graph_basic_info(G)
+print_graph_deg_info(G)
 print_graph_extra_info(G)
 
-#Write filtered graph on file
-G.SaveEdgeList('edge_filtered_graph.txt')
+print("\n*Treshold INIT...")
+startTime = time.time()
+node_threshold_mapping_original = threshold_setting(G, treshold_function, tresholds_coeff[0],tresholds_coeff[1])
+print(f"Time taken: {round(time.time()-startTime, 2)} s")
 
-#prob_func selected and applied, tresholds_func selected, now we can execute TSS
 size_S = []
+print("\n*TSS execution...(10 iterations)")
+startTime = time.time()
 for i in range(0,10): #10 iterations of TSS
-    if i > 0:
-        #Read filtered graph from file (because graph from precent iteration is modified)
-        G = snap.LoadEdgeList(snap.TUNGraph, 'edge_filtered_graph.txt', 0, 1, '\t')
-
-    node_treshold_mapping = treshold_setting(G, treshold_function, tresholds_coeff[0],tresholds_coeff[1])
-
-    S = target_set_selection(G, node_treshold_mapping)
+    node_threshold_mapping = copy.deepcopy(node_threshold_mapping_original)
+    S = target_set_selection(G, node_threshold_mapping)
     size_S.append(len(S))
 
 avg_S_size = sum(size_S)/len(size_S)
-print("\n Average target set size on 10 iterations = {}".format(round(avg_S_size,2)))
-os.remove('edge_filtered_graph.txt')
+print(f"Time taken: {round(time.time()-startTime, 2)} s")
+print("\nAverage target set size on 10 iterations = {}".format(math.ceil(avg_S_size)))

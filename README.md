@@ -42,9 +42,6 @@ We apply the principle of deferred decision: for each edge of the graph a pseudo
 
 - <b> Snap.py (SNAP for Python) </b>: Stanford Network Analysis Platform (SNAP) is a general purpose network analysis and graph mining library. It efficiently manipulates large graphs, calculates structural properties, generates regular and random graphs, and supports attributes on nodes and edges. For details [https://snap.stanford.edu/index.html](https://snap.stanford.edu/index.html)
 
-# Datasets
-
-
 # Implementation
 
 ## Init
@@ -55,9 +52,21 @@ We apply the principle of deferred decision: for each edge of the graph a pseudo
 
 ## requirements
 
-## datasets download
-
 # Computational Complexity
+
+# Datasets
+To carry out the tests on the implemented algorithm, the datasets provided by SNAP were used ([https://snap.stanford.edu/data/index.html](https://snap.stanford.edu/data/index.html)). In particular, in the "Social Networks" category where the edges represent interactions between people.
+
+The following datasets were used:
+- **musae-twitch:** in this dataset nodes are the users of Twitch Social Network and the links are mutual friendships between them. These social networks data were collected in May 2018 and they are organized depending on the language used by users (we consider the ENG variant).
+- **musae-facebook:** in this dataset nodes represent official Facebook pages while the links are mutual likes between sites. 
+
+Here are some statistics on the datasets used:
+
+| Dataset Name   	| #nodes 	| #edges 	| Max Node Degree 	| Avg Node Degree 	| Clustering Coefficient 	| Website link for download                                            	|
+|----------------	|--------	|--------	|-----------------	|-----------------	|------------------------	|----------------------------------------------------------------------	|
+| musae-twitch   	| 7126   	| 35324  	| 720             	| 10              	| 0.13092821901472068    	| https://snap.stanford.edu/data/twitch-social-networks.html           	|
+| musae-facebook 	| 22470  	| 171002 	| 709             	| 16              	| 0.36247953821665585    	| https://snap.stanford.edu/data/facebook-large-page-page-network.html 	|
 
 # Tests execution and results discussion
 
@@ -70,23 +79,5 @@ We apply the principle of deferred decision: for each edge of the graph a pseudo
 
 # Conclusions
 
-
-Data una threshold function t:V -> {0,1,2,…}
-- t(v) = numero di adiacenti attivi del nodo v necessari ad attivare v
-- quale treshold function prendiamo in considerazione?
-    - COSTANTE
-    - A MAGGIORANZA
-    - PROPORZIONALE AL GRADO
-
-
-Data una distribuzione di probabilità associata agli archi di G p:E -> [0,1]
-- p(u,v) = probabilità con cui un nodo attivo u influenza un suo adiacente v
-
-
-1. Assegniamo a ciascun arco del grafo una probabilità (valore compreso tra 0 e 1)
-
-2. Applichiamo il principio di decisione differita: per ogni arco del grafo viene generato un numero pseudocasuale compreso tra 0 e 1; se il numero generato è minore della probabilità presente sull'arco, l'arco viene rimosso. In altre parole rimuoviamo gli archi tra nodi che infettano con una probabilità minore rispetto a quella richiesta. Calcoliamo il sottografo risultante.
-
-3. Inizializziamo i tresholds associati ai nodi in base alla funzione di treshold utilizzata.
 
 4. Il grafo così calcolato e i tresholds vengono dati in input all'algoritmo di Target Set Selection (TSS) che calcola l'insieme soluzione e lo restituisce in output. Questa procedura viene iterata per 10 volte e poi viene calcolata la media della grandezza dell'insieme soluzione.

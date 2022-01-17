@@ -29,22 +29,23 @@ G1degree_based_edges_num = G1.GetEdges()
 
 
 # GitHub Dataset Edge filtering comparison graphic generation
-githubDatasetPath = './Datasets/git_web_ml/musae_git_edges.csv'
-G2 = snap.LoadEdgeList(snap.TUNGraph, githubDatasetPath, 0, 1, ',')
+facebookDatasetPath = './Datasets/facebook_large/musae_facebook_edges.csv'
+
+G2 = snap.LoadEdgeList(snap.TUNGraph, facebookDatasetPath, 0, 1, ',')
 G2original_edges_num = G2.GetEdges()
 
 edge_filtering(G2, "constant", const=prob_constants[0])
 G2costant0_edges_num = G2.GetEdges()
 
-G2 = snap.LoadEdgeList(snap.TUNGraph, githubDatasetPath, 0, 1, ',')
+G2 = snap.LoadEdgeList(snap.TUNGraph, facebookDatasetPath, 0, 1, ',')
 edge_filtering(G2, "constant", const=prob_constants[1])
 G2costant1_edges_num = G2.GetEdges()
 
-G2 = snap.LoadEdgeList(snap.TUNGraph, githubDatasetPath, 0, 1, ',')
+G2 = snap.LoadEdgeList(snap.TUNGraph, facebookDatasetPath, 0, 1, ',')
 edge_filtering(G2, "random")
 G2random_edges_num = G2.GetEdges()
 
-G2 = snap.LoadEdgeList(snap.TUNGraph, githubDatasetPath, 0, 1, ',')
+G2 = snap.LoadEdgeList(snap.TUNGraph, facebookDatasetPath, 0, 1, ',')
 edge_filtering(G2, "degree_based")
 G2degree_based_edges_num = G2.GetEdges()
 
@@ -74,6 +75,6 @@ plt.xlabel("Datasets")
 plt.ylabel('Number of Edges')
 plt.title("Edge filtering based on different probability distribution functions")
 
-plt.xticks(ind+width,['Twitch Dataset','GitHub Dataset'])
+plt.xticks(ind+width,['Twitch Dataset','Facebook Page-Page Dataset'])
 plt.legend( (bar1, bar2, bar3, bar4, bar5), ('Original', 'Const 0.2', 'Const 0.6', 'Random', 'Degree_Based') )
 plt.savefig("./graphics/edge_filtering_comparison.png")
