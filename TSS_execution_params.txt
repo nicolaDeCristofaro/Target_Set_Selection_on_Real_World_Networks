@@ -1,0 +1,8 @@
+TSS_execution params
+
+datasetPath = ./Datasets/twitch/ENGB/musae_ENGB_edges.csv
+prob_function = degree_based
+prob_const = 0.5
+treshold_function = degree_based
+a = 1 
+b = 2
