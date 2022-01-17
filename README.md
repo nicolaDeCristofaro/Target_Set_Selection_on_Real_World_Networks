@@ -31,6 +31,12 @@ This small number of individuals that constitutes the target set are called **se
 *Find a target set S ⊆ V of minimum size for G*
 Dato un grafo non direzionato G=(V,E)
 
+**Extra Requirement:**
+Instead of considering all the edges of the graph that models the network, we want to consider a subset of them. How? Let us consider a probability distribution associated with the edges of our graph G.
+<img src="https://latex.codecogs.com/svg.image?\bg_white&space;p:E&space;\rightarrow&space;&space;[0,1]" title="\bg_white p:E \rightarrow [0,1]" /> where **p(u,v) = probability with which an active node u influences its neighbor v.**
+
+We apply the principle of deferred decision: for each edge of the graph a pseudorandom number between 0 and 1 is generated. If the generated number is less than the probability present on the edge (i.e. the node infects with a probability lower than the required one), the edge is removed from the graph.
+
 # Software Used
 - <b> Python language</b> 
 
@@ -53,12 +59,14 @@ Dato un grafo non direzionato G=(V,E)
 
 # Computational Complexity
 
-# Results Discussion
+# Tests execution and results discussion
 
 ## edge filtering based on propability
+- test configuration
 - before/after filtering for each probability distribution function used
 
-- tests configuration on paper
+## TSS executions
+- tests configuration, execution and discussion on graphics
 
 # Conclusions
 
