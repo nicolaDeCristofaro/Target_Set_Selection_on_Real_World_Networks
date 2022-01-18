@@ -78,8 +78,7 @@ def target_set_selection(graph, node_threshold_mapping):
     node_id_to_delete = 0
 
     while graph.GetNodes() > 0:
-        U = graph.Nodes()
-        for v in U:
+        for v in graph.Nodes():
             if node_threshold_mapping[v.GetId()] == 0: #Case1
                 node_id_to_delete = v.GetId()
                 _,NodeVec = graph.GetNodesAtHop(v.GetId(), 1, False) #get node's neighborhood
@@ -99,13 +98,14 @@ def target_set_selection(graph, node_threshold_mapping):
                 else: #Case3
                     max_ratio_value = -1
                     max_node_id = -1
-                    for u in U:
+                    for u in graph.Nodes():
                         denominator = u.GetDeg()*(u.GetDeg()+1)
                         if denominator == 0: ratio = 0
                         else: ratio = node_threshold_mapping[u.GetId()] / denominator
                         if ratio > max_ratio_value:
                             max_node_id = u.GetId()
                             max_ratio_value = ratio
+
                     node_id_to_delete = max_node_id
                     break
 

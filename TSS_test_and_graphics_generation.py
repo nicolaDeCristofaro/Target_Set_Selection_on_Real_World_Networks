@@ -3,6 +3,7 @@ import sys
 import os
 import matplotlib.pyplot as plt
 import copy
+import time
 
 from TSS_utils import *
 
@@ -12,11 +13,11 @@ if len(sys.argv) > 1:
 else:
     sys.exit("Dataset path has to be specified")
 
-datasetName = os.path.basename(os.path.normpath(datasetPath))
-datasetName = os.path.splitext(datasetName)[0]
-
 #datasetPath = './Datasets/twitch/ENGB/musae_ENGB_edges.csv'
 #datasetPath = './Datasets/facebook_large/musae_facebook_edges.csv'
+
+datasetName = os.path.basename(os.path.normpath(datasetPath))
+datasetName = os.path.splitext(datasetName)[0]
 
 G = snap.LoadEdgeList(snap.TUNGraph, datasetPath, 0, 1, ',')
 print("\nOriginal graph info:")
@@ -68,13 +69,16 @@ for prob_func in prob_functions:
         if j == 1: j = 0
         else: j += 1
 
+        print("\n*TSS execution...(10 iterations)")
+        startTime = time.time()
         for k in range(0,10):
             node_threshold_mapping = copy.deepcopy(node_threshold_mapping_original)
             S = target_set_selection(G, node_threshold_mapping)
             size_S.append(len(S))
         
         avg_S_size = sum(size_S)/len(size_S)
-        print("Average target set size on 10 iterations for TEST {} = {}".format(count, math.ceil(avg_S_size)))
+        print(f"Execution Time: {round(time.time()-startTime, 2)} s")
+        print("Average target set size for TEST {} = {}".format(count, math.ceil(avg_S_size)))
         print("\n***************************************************")
         print("\n")
         testsInfo[z]["avg_target_set_size"] = math.ceil(avg_S_size)
