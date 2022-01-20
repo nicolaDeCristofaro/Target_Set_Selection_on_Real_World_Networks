@@ -25,7 +25,10 @@ if datasetPath.endswith('.csv'):
     G = snap.LoadEdgeList(snap.TUNGraph, datasetPath, 0, 1, ',')
 else:
     G = snap.LoadEdgeList(snap.TUNGraph, datasetPath, 0, 1, '\t')
-print("\nOriginal graph info:")
+
+print("Dataset = ",datasetName)
+
+print("\nOriginal Graph Info:")
 print_graph_basic_info(G)
 print_graph_deg_info(G)
 print_graph_extra_info(G)
@@ -34,78 +37,94 @@ prob_functions = ["constant","constant","random","degree_based"]
 prob_constants = [0.2,0.6]
 
 thresholds_functions = ["constant","constant","degree_based", "degree_based"]
-thresholds_const = [2,6]
-thresholds_coeff = [(1,1),(2,7)]
+thresholds_constants = [2,6]
+thresholds_coefficients = [(1,1),(2,7)]
 
-i = 0
-count = 0
-c = 0
-for prob_func in prob_functions:
-    j = 0
-    x = 0
-    testsInfo = [dict() for x in range(4)]
-    z = 0
 
-    prob_const = 0
+count = 1
+for i in range(0,len(prob_functions)):
+
+    testsInfo = [dict() for x in range(4)] #To hold info about each test
+
+    prob_func = prob_functions[i]
+    prob_const = None
     if prob_func == "constant":
         prob_const = prob_constants[i]
-        i += 1
 
-    for thresholds_func in thresholds_functions:
-        G = snap.LoadEdgeList(snap.TUNGraph, datasetPath, 0, 1, ',')
-        if prob_func == "constant":
-            edge_filtering(G, prob_func, const=prob_const)
+    for j in range(0,len(thresholds_functions)):
+        
+        thresholds_func = thresholds_functions[j]
+        threshold_const = None
+        threshold_coeff_a = None
+        threshold_coeff_b = None
+        if thresholds_func == "constant":
+            threshold_const = thresholds_constants[j]
         else:
-            edge_filtering(G, prob_func)
+            threshold_coeff_a =  thresholds_coefficients[j-2][0]
+            threshold_coeff_b = thresholds_coefficients[j-2][1]
+
+        #print info about the test
+        print("\n***********************************************************************")
+        print("Test {}".format(count))
+        if prob_func == "constant":
+            print("- Probability distribution function = {} with const = {}".format(prob_func,prob_const))
+            testsInfo[j]["prob_func"] = prob_func + " " + str(prob_const)
+        else:
+            print("- Probability distribution function = {}".format(prob_func))
+            testsInfo[j]["prob_func"] = prob_func
+        
+        if thresholds_func == "constant":
+            print("- Threshold function = {} with const = {}".format(thresholds_func,threshold_const))
+            testsInfo[j]["threshold_func"] = thresholds_func + "(const=" + str(threshold_const)+ ")"
+        else:
+            print("- Threshold function = {} with coeff (a= {},b={})".format(thresholds_func,threshold_coeff_a,threshold_coeff_b))
+            testsInfo[j]["threshold_func"] = thresholds_func + "(a=" + str(threshold_coeff_a) + ",b=" + str(threshold_coeff_b) + ")"
 
         size_S = []
-        print("\n***************************************************")
-        print("\nSubgraph info:")
-        print_graph_basic_info(G)
+        for k in range(0,10): #10 iterations and then avg because of the probability on the edges
+            print("#######################################################################")
+            print("\nIteration ",k)
 
-        if prob_func == "constant":
-            if thresholds_func == "constant":
-                print("\nTest {} (prob_func = {} {} - threshold_func = {} with const {})".format(count,prob_func,prob_const,thresholds_func,thresholds_const[x]))
-                testsInfo[z]["threshold_func"] = thresholds_func + "(const=" + str(thresholds_const[x])+ ")"
+            #read the graph again (refresh original graph)
+            G = None
+            if datasetPath.endswith('.csv'):
+                G = snap.LoadEdgeList(snap.TUNGraph, datasetPath, 0, 1, ',')
             else:
-                print("\nTest {} (prob_func = {} {} - threshold_func = {} with coeff ({},{}))".format(count,prob_func,prob_const,thresholds_func,thresholds_coeff[j][0],thresholds_coeff[j][1]))
-                testsInfo[z]["threshold_func"] = thresholds_func + "(a=" + str(thresholds_coeff[j][0]) + ",b=" + str(thresholds_coeff[j][1]) + ")"
-            
-            testsInfo[z]["prob_func"] = prob_func + " " + str(prob_const)
-        else:
-            if thresholds_func == "constant":
-                print("\nTest {} (prob_func = {} - threshold_func = {} with const {})".format(count,prob_func,thresholds_func,thresholds_const[x]))
-                testsInfo[z]["threshold_func"] = thresholds_func + "(const=" + str(thresholds_const[x])+ ")"
+                G = snap.LoadEdgeList(snap.TUNGraph, datasetPath, 0, 1, '\t')
+
+            print("\n*Edges pre-computation...")
+            startTime = time.time()
+            if prob_func == "constant":
+                edge_filtering(G, prob_func, const=prob_const)
             else:
-                print("\nTest {} (prob_func = {} - threshold_func = {} with coeff ({},{}))".format(count,prob_func,thresholds_func,thresholds_coeff[j][0],thresholds_coeff[j][1]))
-                testsInfo[z]["threshold_func"] = thresholds_func + "(a=" + str(thresholds_coeff[j][0]) + ",b=" + str(thresholds_coeff[j][1]) + ")"
-            
-            testsInfo[z]["prob_func"] = prob_func
+                edge_filtering(G, prob_func)
+            print(f"Time taken: {round(time.time()-startTime, 2)} s")
 
-        node_threshold_mapping_original = {}
-        if thresholds_func == "constant":
-            node_threshold_mapping_original = threshold_setting(G, thresholds_func, const=thresholds_const[x])
-            if x == 1: x = 0
-            else: x += 1
-        else:
-            node_threshold_mapping_original = threshold_setting(G, thresholds_func, a=thresholds_coeff[j][0],b=thresholds_coeff[j][1])
-            if j == 1: j = 0
-            else: j += 1
+            print("\nGraph Info after edges pre-computation:")
+            print_graph_basic_info(G)
 
-        print("\n*TSS execution...(10 iterations)")
-        startTime = time.time()
-        for k in range(0,10):
-            node_threshold_mapping = copy.deepcopy(node_threshold_mapping_original)
+            print("\n*Treshold setting...")
+            startTime = time.time()
+            node_threshold_mapping = {}
+            if thresholds_func == "constant":
+                node_threshold_mapping = threshold_setting(G, thresholds_func, const=threshold_const)
+            else:
+                node_threshold_mapping = threshold_setting(G, thresholds_func, a=threshold_coeff_a,b=threshold_coeff_b)
+            print(f"Time taken: {round(time.time()-startTime, 2)} s")
+
+            print("\n*TSS execution...")
+            startTime = time.time()
             S = target_set_selection(G, node_threshold_mapping)
+            print("Target Set Size for Iteration {} -> {}".format(k,len(S)))
+            print(f"Time taken: {round(time.time()-startTime, 2)} s")
+            print("#######################################################################")
             size_S.append(len(S))
         
-        avg_S_size = sum(size_S)/len(size_S)
-        print(f"Execution Time: {round(time.time()-startTime, 2)} s")
-        print("Average target set size for TEST {} = {}".format(count, math.ceil(avg_S_size)))
+        avg_S_size = math.ceil(sum(size_S)/len(size_S))
+        print("Average target set size for TEST {} = {}".format(count, avg_S_size))
         print("\n***************************************************")
         print("\n")
-        testsInfo[z]["avg_target_set_size"] = math.ceil(avg_S_size)
-        z += 1
+        testsInfo[j]["avg_target_set_size"] = avg_S_size
         count += 1
 
     #Generate and save the graphic
@@ -118,11 +137,10 @@ for prob_func in prob_functions:
     
     plt.figure(figsize=(20,10))
 
-    plt.barh(threshold_func_values,avg_target_set_size_values, color=['red', 'green', 'blue', 'cyan'])
+    plt.barh(threshold_func_values,avg_target_set_size_values, color=['#ffcce7', '#daf2dc', '#81b7d2', '#4d5198'])
     title = "Avg target set size with "+ p_func + " probability func - varying threshold func"
     plt.title(title)
     plt.ylabel('Threshold function values')
     plt.xlabel('Avg target set size on 10 iterations')
-    file_name = "./graphics/"+datasetName+"/avg_ts_size_"+str(c)+".png"
+    file_name = "./graphics/algorithm_execution/"+datasetName+"/"+datasetName+"avg_ts_size_"+str(i)+".png"
     plt.savefig(file_name)
-    c += 1
