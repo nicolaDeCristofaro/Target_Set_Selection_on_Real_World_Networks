@@ -46,7 +46,8 @@ print_graph_basic_info(G)
 print_graph_extra_info(G)
 
 tresholds_coeff = [(2,-4)] # (a,b) -> q = b/(a+b)
-node_treshold_mapping = threshold_setting(G, "constant",tresholds_coeff[0][0],tresholds_coeff[0][1])
+threshold_const = 3
+node_treshold_mapping = threshold_setting(G, "constant",const=threshold_const)
 
 S = target_set_selection(G, node_treshold_mapping)
 
