@@ -2,7 +2,6 @@ import snap
 import sys
 import os
 import matplotlib.pyplot as plt
-import copy
 import time
 
 from TSS_utils import *

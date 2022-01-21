@@ -1,0 +1,3048 @@
+Dataset =  CA-HepTh
+
+Original Graph Info:
+Number of nodes = 9877
+Number of edges = 25998
+Max Node Degree = 65
+Avg Node Degree = 6
+Clustering coefficient = 0.4718599657052348
+
+***********************************************************************
+Test 1
+- Probability distribution function = constant with const = 0.2
+- Threshold function = constant with const = 2
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.12 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5242
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 1584
+Time taken: 64.81 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5095
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 1631
+Time taken: 65.69 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5278
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 1550
+Time taken: 59.73 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5260
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 1595
+Time taken: 63.89 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.14 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5291
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 1613
+Time taken: 65.05 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5273
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 1555
+Time taken: 62.65 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5252
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 1552
+Time taken: 63.27 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5268
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 1591
+Time taken: 64.79 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5155
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 1612
+Time taken: 66.23 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.14 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5316
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 1548
+Time taken: 68.55 s
+#######################################################################
+Average target set size for TEST 1 = 1584
+
+***************************************************
+
+
+
+***********************************************************************
+Test 2
+- Probability distribution function = constant with const = 0.2
+- Threshold function = constant with const = 6
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5201
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 2205
+Time taken: 65.42 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.14 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5200
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 2252
+Time taken: 67.67 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5218
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 2198
+Time taken: 69.32 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5182
+
+*Treshold setting...
+Time taken: 0.07 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 2174
+Time taken: 67.18 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5354
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 2196
+Time taken: 67.14 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5128
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 2172
+Time taken: 62.91 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5148
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 2176
+Time taken: 68.0 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5222
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 2196
+Time taken: 64.82 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5232
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 2145
+Time taken: 65.12 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.14 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5222
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 2161
+Time taken: 65.55 s
+#######################################################################
+Average target set size for TEST 2 = 2188
+
+***************************************************
+
+
+
+***********************************************************************
+Test 3
+- Probability distribution function = constant with const = 0.2
+- Threshold function = degree_based with coeff (a= 1,b=1)
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5259
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 2223
+Time taken: 65.69 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5271
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 2237
+Time taken: 64.77 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5196
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 2230
+Time taken: 65.4 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5371
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 2244
+Time taken: 65.89 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5109
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 2221
+Time taken: 65.35 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.14 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5199
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 2207
+Time taken: 61.71 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5166
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 2201
+Time taken: 62.42 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5145
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 2217
+Time taken: 63.24 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.14 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5257
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 2278
+Time taken: 67.09 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5196
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 2230
+Time taken: 70.53 s
+#######################################################################
+Average target set size for TEST 3 = 2229
+
+***************************************************
+
+
+
+***********************************************************************
+Test 4
+- Probability distribution function = constant with const = 0.2
+- Threshold function = degree_based with coeff (a= 2,b=7)
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5232
+
+*Treshold setting...
+Time taken: 0.06 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 914
+Time taken: 68.66 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.14 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5246
+
+*Treshold setting...
+Time taken: 0.06 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 894
+Time taken: 70.91 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5154
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 921
+Time taken: 71.62 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5161
+
+*Treshold setting...
+Time taken: 0.06 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 960
+Time taken: 71.64 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5228
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 944
+Time taken: 72.81 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.28 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5213
+
+*Treshold setting...
+Time taken: 0.12 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 895
+Time taken: 72.75 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5110
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 934
+Time taken: 71.31 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5228
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 931
+Time taken: 71.44 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5170
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 924
+Time taken: 72.18 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.14 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 5151
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 931
+Time taken: 72.32 s
+#######################################################################
+Average target set size for TEST 4 = 925
+
+***************************************************
+
+
+
+***********************************************************************
+Test 5
+- Probability distribution function = constant with const = 0.6
+- Threshold function = constant with const = 2
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.24 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15477
+
+*Treshold setting...
+Time taken: 0.06 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 1274
+Time taken: 125.54 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15532
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 1295
+Time taken: 72.51 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15607
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 1278
+Time taken: 110.14 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.12 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15574
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 1274
+Time taken: 121.62 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15461
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 1297
+Time taken: 88.92 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15436
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 1294
+Time taken: 81.66 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.12 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15635
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 1296
+Time taken: 104.18 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15602
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 1288
+Time taken: 102.77 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15594
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 1262
+Time taken: 98.79 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.09 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15631
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 1289
+Time taken: 81.51 s
+#######################################################################
+Average target set size for TEST 5 = 1285
+
+***************************************************
+
+
+
+***********************************************************************
+Test 6
+- Probability distribution function = constant with const = 0.6
+- Threshold function = constant with const = 6
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.09 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15552
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 3111
+Time taken: 129.58 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.09 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15749
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 3100
+Time taken: 136.23 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.09 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15542
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 3153
+Time taken: 136.78 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.08 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15680
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 3098
+Time taken: 138.38 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.09 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15566
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 3096
+Time taken: 130.74 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15607
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 3105
+Time taken: 138.94 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.09 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15515
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 3121
+Time taken: 132.9 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15564
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 3090
+Time taken: 144.48 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.14 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15451
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 3093
+Time taken: 141.7 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15525
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 3108
+Time taken: 138.83 s
+#######################################################################
+Average target set size for TEST 6 = 3108
+
+***************************************************
+
+
+
+***********************************************************************
+Test 7
+- Probability distribution function = constant with const = 0.6
+- Threshold function = degree_based with coeff (a= 1,b=1)
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.09 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15608
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 3862
+Time taken: 148.82 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15595
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 3850
+Time taken: 145.99 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.08 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15788
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 3891
+Time taken: 144.47 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15576
+
+*Treshold setting...
+Time taken: 0.07 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 3875
+Time taken: 147.13 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.09 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15576
+
+*Treshold setting...
+Time taken: 0.06 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 3860
+Time taken: 149.21 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15677
+
+*Treshold setting...
+Time taken: 0.06 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 3870
+Time taken: 144.01 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15528
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 3863
+Time taken: 136.84 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.09 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15550
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 3888
+Time taken: 129.66 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.08 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15627
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 3888
+Time taken: 128.32 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.09 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15566
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 3889
+Time taken: 136.03 s
+#######################################################################
+Average target set size for TEST 7 = 3874
+
+***************************************************
+
+
+
+***********************************************************************
+Test 8
+- Probability distribution function = constant with const = 0.6
+- Threshold function = degree_based with coeff (a= 2,b=7)
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.09 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15589
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 720
+Time taken: 148.93 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15515
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 723
+Time taken: 141.06 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.08 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15610
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 753
+Time taken: 141.42 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15636
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 733
+Time taken: 143.3 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.09 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15498
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 723
+Time taken: 141.66 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.12 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15577
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 736
+Time taken: 139.46 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.12 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15473
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 743
+Time taken: 143.39 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.08 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15542
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 725
+Time taken: 142.16 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.12 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15502
+
+*Treshold setting...
+Time taken: 0.06 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 715
+Time taken: 136.08 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.08 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 15641
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 708
+Time taken: 140.54 s
+#######################################################################
+Average target set size for TEST 8 = 728
+
+***************************************************
+
+
+
+***********************************************************************
+Test 9
+- Probability distribution function = random
+- Threshold function = constant with const = 2
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12900
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 1397
+Time taken: 77.83 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12943
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 1313
+Time taken: 47.34 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13036
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 1352
+Time taken: 99.8 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13059
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 1303
+Time taken: 91.81 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12893
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 1381
+Time taken: 88.58 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12947
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 1371
+Time taken: 69.48 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13028
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 1342
+Time taken: 68.8 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.12 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12927
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 1400
+Time taken: 90.68 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12988
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 1355
+Time taken: 88.87 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12938
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 1365
+Time taken: 69.28 s
+#######################################################################
+Average target set size for TEST 9 = 1358
+
+***************************************************
+
+
+
+***********************************************************************
+Test 10
+- Probability distribution function = random
+- Threshold function = constant with const = 6
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.21 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12979
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 3005
+Time taken: 119.36 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12960
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 3049
+Time taken: 128.4 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13204
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 2991
+Time taken: 120.96 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13017
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 3023
+Time taken: 124.16 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12953
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 3004
+Time taken: 118.83 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12978
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 3040
+Time taken: 120.04 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12920
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 2995
+Time taken: 120.75 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12895
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 3056
+Time taken: 119.37 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13001
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 3017
+Time taken: 126.34 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12965
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 2999
+Time taken: 128.81 s
+#######################################################################
+Average target set size for TEST 10 = 3018
+
+***************************************************
+
+
+
+***********************************************************************
+Test 11
+- Probability distribution function = random
+- Threshold function = degree_based with coeff (a= 1,b=1)
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12998
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 3579
+Time taken: 122.79 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13131
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 3578
+Time taken: 125.71 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13041
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 3563
+Time taken: 121.71 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12910
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 3537
+Time taken: 121.78 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13032
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 3566
+Time taken: 126.69 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12989
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 3535
+Time taken: 122.47 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12924
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 3525
+Time taken: 126.76 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12938
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 3536
+Time taken: 117.9 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12996
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 3567
+Time taken: 120.2 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13115
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 3565
+Time taken: 123.94 s
+#######################################################################
+Average target set size for TEST 11 = 3556
+
+***************************************************
+
+
+
+***********************************************************************
+Test 12
+- Probability distribution function = random
+- Threshold function = degree_based with coeff (a= 2,b=7)
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.12 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13098
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 744
+Time taken: 115.41 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13162
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 802
+Time taken: 138.35 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.11 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13026
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 756
+Time taken: 118.85 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 12818
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 794
+Time taken: 115.63 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13042
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 762
+Time taken: 112.47 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13045
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 748
+Time taken: 113.75 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13030
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 753
+Time taken: 112.44 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13092
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 749
+Time taken: 112.76 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.1 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13010
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 771
+Time taken: 133.49 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.13 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 13007
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 775
+Time taken: 134.58 s
+#######################################################################
+Average target set size for TEST 12 = 766
+
+***************************************************
+
+
+
+***********************************************************************
+Test 13
+- Probability distribution function = degree_based
+- Threshold function = constant with const = 2
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.19 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24191
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 908
+Time taken: 49.37 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24142
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 926
+Time taken: 83.39 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.18 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24194
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 901
+Time taken: 86.46 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.17 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24146
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 935
+Time taken: 64.42 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24162
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 906
+Time taken: 81.51 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.17 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24149
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 913
+Time taken: 84.93 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24235
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 904
+Time taken: 79.73 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24221
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 941
+Time taken: 78.15 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24132
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 905
+Time taken: 59.47 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24182
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 945
+Time taken: 82.65 s
+#######################################################################
+Average target set size for TEST 13 = 919
+
+***************************************************
+
+
+
+***********************************************************************
+Test 14
+- Probability distribution function = degree_based
+- Threshold function = constant with const = 6
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24088
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 2854
+Time taken: 159.87 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.17 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24066
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 2832
+Time taken: 157.12 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.18 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24194
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 2843
+Time taken: 163.85 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.17 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24212
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 2886
+Time taken: 165.87 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.17 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24175
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 2866
+Time taken: 154.51 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.19 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24143
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 2852
+Time taken: 156.2 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.19 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24137
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 2844
+Time taken: 152.04 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.17 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24181
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 2873
+Time taken: 167.26 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24104
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 2872
+Time taken: 149.64 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24209
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 2864
+Time taken: 150.42 s
+#######################################################################
+Average target set size for TEST 14 = 2859
+
+***************************************************
+
+
+
+***********************************************************************
+Test 15
+- Probability distribution function = degree_based
+- Threshold function = degree_based with coeff (a= 1,b=1)
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.3 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24143
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 4476
+Time taken: 170.07 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.18 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24142
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 4468
+Time taken: 163.32 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.17 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24224
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 4476
+Time taken: 150.92 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24216
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 4462
+Time taken: 150.79 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24124
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 4446
+Time taken: 148.32 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24141
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 4455
+Time taken: 148.84 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24127
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 4436
+Time taken: 149.01 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24220
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 4477
+Time taken: 150.71 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24186
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 4429
+Time taken: 147.23 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.17 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24184
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 4486
+Time taken: 149.24 s
+#######################################################################
+Average target set size for TEST 15 = 4462
+
+***************************************************
+
+
+
+***********************************************************************
+Test 16
+- Probability distribution function = degree_based
+- Threshold function = degree_based with coeff (a= 2,b=7)
+#######################################################################
+
+Iteration  0
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24203
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 0 -> 615
+Time taken: 155.53 s
+#######################################################################
+#######################################################################
+
+Iteration  1
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24182
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 1 -> 602
+Time taken: 160.97 s
+#######################################################################
+#######################################################################
+
+Iteration  2
+
+*Edges pre-computation...
+Time taken: 0.19 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24097
+
+*Treshold setting...
+Time taken: 0.05 s
+
+*TSS execution...
+Target Set Size for Iteration 2 -> 616
+Time taken: 158.94 s
+#######################################################################
+#######################################################################
+
+Iteration  3
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24175
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 3 -> 580
+Time taken: 158.52 s
+#######################################################################
+#######################################################################
+
+Iteration  4
+
+*Edges pre-computation...
+Time taken: 0.18 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24107
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 4 -> 625
+Time taken: 155.61 s
+#######################################################################
+#######################################################################
+
+Iteration  5
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24160
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 5 -> 632
+Time taken: 155.23 s
+#######################################################################
+#######################################################################
+
+Iteration  6
+
+*Edges pre-computation...
+Time taken: 0.17 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24118
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 6 -> 612
+Time taken: 154.2 s
+#######################################################################
+#######################################################################
+
+Iteration  7
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24218
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 7 -> 606
+Time taken: 156.05 s
+#######################################################################
+#######################################################################
+
+Iteration  8
+
+*Edges pre-computation...
+Time taken: 0.16 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24192
+
+*Treshold setting...
+Time taken: 0.03 s
+
+*TSS execution...
+Target Set Size for Iteration 8 -> 613
+Time taken: 156.12 s
+#######################################################################
+#######################################################################
+
+Iteration  9
+
+*Edges pre-computation...
+Time taken: 0.15 s
+
+Graph Info after edges pre-computation:
+Number of nodes = 9877
+Number of edges = 24200
+
+*Treshold setting...
+Time taken: 0.04 s
+
+*TSS execution...
+Target Set Size for Iteration 9 -> 593
+Time taken: 156.51 s
+#######################################################################
+Average target set size for TEST 16 = 610
+
+***************************************************
+
+

@@ -78,25 +78,25 @@ def threshold_setting(graph, threshold_function, **kwargs):
 #TSS algorithm
 def target_set_selection(graph, node_threshold_mapping):
     S = set()
-    already_active_set = set()
+    active_ready_set = set()
     while graph.GetNodes() > 0:
         max_node_id = -1
         max_ratio_value = -1
         node_id_to_add_to_ts = None
 
         for v in graph.Nodes():
-            #if exists a node with threshold == 0 it is already active so It influences other nodes in its neighbourhood
+            #CASE 1:if exists a node with threshold == 0 it is already active so It influences other nodes in its neighbourhood
             #and then delete it from the network 
             if node_threshold_mapping[v.GetId()] == 0: 
-                already_active_set.add(v.GetId())
+                active_ready_set.add(v.GetId())
             else:
                 if v.GetDeg() < node_threshold_mapping[v.GetId()]:
-                    #it exists a node that has the degree < of its threshold
+                    #CASE 2:it exists a node that has the degree < of its threshold
                     #so add it to the target set S because having a few link nobody can influence it
                     #and then delete it from the network 
                     node_id_to_add_to_ts = v.GetId()
                 else:
-                    #pick a nod v with the selected criteria, decrement of 1 its threshold neighborhoods
+                    #CASE 3:pick a nod v with the selected criteria, decrement of 1 its threshold neighborhoods
                     #and then delete it from the network
                     denominator = v.GetDeg()*(v.GetDeg()+1)
                     if denominator == 0: ratio = 0
@@ -106,9 +106,9 @@ def target_set_selection(graph, node_threshold_mapping):
                         max_ratio_value = ratio
 
         #update thresholds and node delete
-        if(len(already_active_set) > 0):
-            while(len(already_active_set) > 0):
-                node_id = already_active_set.pop()
+        if(len(active_ready_set) > 0):
+            while(len(active_ready_set) > 0):
+                node_id = active_ready_set.pop()
                 _,NodeVec = graph.GetNodesAtHop(node_id, 1, False) #get node's neighborhood
                 for item in NodeVec:
                     #decrement of 1 the threshold of neighbors nodes still inactive
