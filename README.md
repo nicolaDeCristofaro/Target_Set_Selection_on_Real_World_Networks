@@ -286,6 +286,24 @@ We produce the same graphic presented on the paper, so we can see the same value
 <img src="./graphics/algorithm_correctness/CA-HepTh/CA-HepTh_correctness.png" width="400"/> <img src="./graphics/algorithm_correctness/CA-HepTh/CA-HepTh_original_paper.png" width="400"/> 
 
 # Tests execution and results discussion
+
+## Edges pre-computation tests
+First of all, tests were carried out to understand how the choice of the probability functions on the edges of the graph affected the removal of the edges themselves.
+
+From the following graphic we can see, for each dataset considered, the number of edges on the original graph and then how this number is reduced following the removal of the edges after applying the deferred decision principle. 
+
+In fact, we can see, for each dataset, the number of edges by applying a constant probability on the edges of 0.2, then constant of 0.6, then again a random probability and finally a probability that depends on the degree of the source node and recipient node of the edges considered(details seen in above sections).
+
+<img src="graphics/edges_precomputation_comparison.png"/>
+
+What do we notice?
+- Using constant values as probability on the edges, what we expect happens, that is with a constant as low as 0.2 many edges are removed from the original graph while with the constant 0.6 a smaller number of edges are removed.
+- Using a Random probability we notice how the number of edges is roughly halved.
+- Finally we note that by using a probability on the edges which is a function of the degree of the source and recipient nodes of each edge, we have a very high number of resulting edges, or rather very few edges are removed. This indicates that the nodes have a fairly high degree, which results in a fairly high probability on the edges which means that most of the nodes influence each other a lot. Practically it means that the pseudorandom number generated is almost never able to be greater and consequently very few edges are removed.
+
+These considerations can be made for all 3 datasets considered.
+
+## TSS tests
 In this section we'll make various tests on TSS algorithm implemented on the datasets specified before.
 
 For each dataset we execute "TSS_test_and_graphics_generation.py" giving as parameter the dataset path. Then automatically will be perfomed tests on that dataset varying the probability functions and the threshold functions.
