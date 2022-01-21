@@ -281,9 +281,9 @@ We produce the same graphic presented on the paper, so we can see the same value
 
 - On the left, my implementation results, on the right paper implementation results (red line with * scatter).
 
-<img src="./graphics/algorithm_correctness/CA-GrQc/CA-GrQc_correctness.png" width="425"/> <img src="./graphics/algorithm_correctness/CA-GrQc/CA-GrQc_original_paper.png" width="425"/>
+<img src="./graphics/algorithm_correctness/CA-GrQc/CA-GrQc_correctness.png" width="400"/> <img src="./graphics/algorithm_correctness/CA-GrQc/CA-GrQc_original_paper.png" width="400"/>
 
-<img src="./graphics/algorithm_correctness/CA-HepTh/CA-HepTh_correctness.png" width="425"/> <img src="./graphics/algorithm_correctness/CA-HepTh/CA-HepTh_original_paper.png" width="425"/> 
+<img src="./graphics/algorithm_correctness/CA-HepTh/CA-HepTh_correctness.png" width="400"/> <img src="./graphics/algorithm_correctness/CA-HepTh/CA-HepTh_original_paper.png" width="400"/> 
 
 # Tests execution and results discussion
 In this section we'll make various tests on TSS algorithm implemented on the datasets specified before.
