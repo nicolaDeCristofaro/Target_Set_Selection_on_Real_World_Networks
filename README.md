@@ -36,8 +36,11 @@ assigning **tresholds** to the vertices of G.
 Dato un grafo non direzionato G=(V,E)
 
 **Extra Requirement:**
-Instead of considering all the edges of the graph that models the network, we want to consider a subset of them. How? Let us consider a probability distribution associated with the edges of our graph G.
-<img src="https://latex.codecogs.com/svg.image?\bg_white&space;p:E&space;\rightarrow&space;&space;[0,1]" title="\bg_white p:E \rightarrow [0,1]" /> where **p(u,v) = probability with which an active node u influences its neighbor v.**
+Instead of considering all the edges of the graph that models the network, we want to consider a subset of them. How? Let us consider a probability distribution associated with the edges of our graph G:
+
+<img src="https://latex.codecogs.com/svg.image?\bg_white&space;p:E&space;\rightarrow&space;&space;[0,1]" title="\bg_white p:E \rightarrow [0,1]" /> 
+
+where **p(u,v) = probability with which an active node u influences its neighbor v.**
 
 We apply the principle of deferred decision: for each edge of the graph a pseudorandom number between 0 and 1 is generated. If the generated number is less than the probability present on the edge (i.e. the node infects with a probability lower than the required one), the edge is removed from the graph.
 
@@ -362,31 +365,44 @@ Below we show the results of the tests in graphics produced with "pyplot" of pyt
 
 1. When we consider a **degree_based** threshold function with coefficients **(a=2,b=7)** for how the threshold of a node is computed, let's remember the formula we used:
 
-<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\inline&space;min\left\{&space;a&space;*&space;d(v)/b,&space;d(v)\right\}" title="\inline min\left\{ a * d(v)/b, d(v)\right\}" />
+    <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\inline&space;min\left\{&space;a&space;*&space;d(v)/b,&space;d(v)\right\}" title="\inline min\left\{ a * d(v)/b, d(v)\right\}" />
 
-this turns out to be a very **small value in most cases**.
+    this turns out to be a very **small value in most cases**.
 
-*Example:*
-- Let's suppose the degree of a node v is **d(v) = 6**
+    *Example:*
+    - Let's suppose the degree of a node v is **d(v) = 6**
 
-<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\inline&space;t(v)&space;=&space;min\left\{&space;a&space;*&space;d(v)/b,&space;d(v)\right\}&space;=&space;min\left\{&space;2&space;*&space;6/7,&space;6\right\}&space;=&space;min\left\{&space;1.7,&space;6\right\}&space;=&space;math.ceil(1.7)&space;=&space;2&space;" title="\inline t(v) = min\left\{ a * d(v)/b, d(v)\right\} = min\left\{ 2 * 6/7, 6\right\} = min\left\{ 1.7, 6\right\} = math.ceil(1.7) = 2 " />
+    <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\inline&space;t(v)&space;=&space;min\left\{&space;a&space;*&space;d(v)/b,&space;d(v)\right\}&space;=&space;min\left\{&space;2&space;*&space;6/7,&space;6\right\}&space;=&space;min\left\{&space;1.7,&space;6\right\}&space;=&space;math.ceil(1.7)&space;=&space;2&space;" title="\inline t(v) = min\left\{ a * d(v)/b, d(v)\right\} = min\left\{ 2 * 6/7, 6\right\} = min\left\{ 1.7, 6\right\} = math.ceil(1.7) = 2 " />
 
-This is because from the statistics we have seen earlier on the datasets, nodes have a fairly high average degree, in particular 10 for the Twitch dataset and 6 for the other 2, but we have seen how the degree of a node can be much higher (see max node degree datasets stats).
+    This is because from the statistics we have seen earlier on the datasets, nodes have a fairly high average degree, in particular 10 for the Twitch dataset and 6 for the other 2, but we have seen how the degree of a node can be much higher (see max node degree datasets stats).
 
-Consequently, in this situation, with these coefficients, when we go to calculate the minimum in the formula expressed above, the degree is almost never taken as a threshold value but in most cases the alternative is taken because it is a lower value.
+    Consequently, in this situation, with these coefficients, when we go to calculate the minimum in the formula expressed above, the degree is almost never taken as a threshold value but in most cases the alternative is taken because it is a lower value.
 
-Therefore, since in this situation, in most cases we find ourselves with fairly low threshold values ​​of the nodes and we remember that nodes with low thresholds are easy-to-influence nodes. It follows that the size of the target set is very low, the lowest among the tested variants, meaning that, a small seed set can influence many nodes, in this case.
+    Therefore, since in this situation, in most cases we find ourselves with fairly low threshold values ​​of the nodes and we remember that nodes with low thresholds are easy-to-influence nodes. It follows that the size of the target set is very low, the lowest among the tested variants, meaning that, a small seed set can influence many nodes, in this case.
 
-2.On the contrary, when we consider a **degree_based** threshold function with coefficients **(a=1,b=1)** for how the threshold of a node is computed this turns out to be **equal to the degree of the node in most cases**.
+2. On the contrary, when we consider a **degree_based** threshold function with coefficients **(a=1,b=1)** for how the threshold of a node is computed this turns out to be **equal to the degree of the node in most cases**.
 
-*Example:*
-- Let's suppose the degree of a node v is **d(v) = 6**
+    *Example:*
+    - Let's suppose the degree of a node v is **d(v) = 6**
 
-<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\inline&space;t(v)&space;=&space;min\left\{&space;a&space;*&space;d(v)/b,&space;d(v)\right\}&space;=&space;min\left\{&space;1&space;*&space;6/1,&space;6\right\}&space;=&space;min\left\{&space;6,&space;6\right\}&space;=&space;6&space;" title="\inline t(v) = min\left\{ a * d(v)/b, d(v)\right\} = min\left\{ 1 * 6/1, 6\right\} = min\left\{ 6, 6\right\} = 6 " />
+    <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\inline&space;t(v)&space;=&space;min\left\{&space;a&space;*&space;d(v)/b,&space;d(v)\right\}&space;=&space;min\left\{&space;1&space;*&space;6/1,&space;6\right\}&space;=&space;min\left\{&space;6,&space;6\right\}&space;=&space;6&space;" title="\inline t(v) = min\left\{ a * d(v)/b, d(v)\right\} = min\left\{ 1 * 6/1, 6\right\} = min\left\{ 6, 6\right\} = 6 " />
 
-As we said before, given that nodes have a fairly high degree the threshold values are equally high, in most cases.
-And remember that nodes with high threshold values are hard-to-influence nodes. 
+    As we said before, given that nodes have a fairly high degree the threshold values are equally high, in most cases.
+    And remember that nodes with high threshold values are hard-to-influence nodes. 
 
-It follows that the size of the resulting target set is very high, the highest among the variants tested and this shows that the presence of nodes with a high degree, therefore of communities "firmly" connected to each other, slows down the diffusion process, that is you need to have a very large initial seed set to affect all nodes with this threshold setting.
+    It follows that the size of the resulting target set is very high, the highest among the variants tested and this shows that the presence of nodes with a high degree, therefore of communities "firmly" connected to each other, slows down the diffusion process, that is you need to have a very large initial seed set to affect all nodes with this threshold setting.
+
+3. As for the use of constant threshold values, what we expect happens: with a low value such as 2, the size of the resulting target set is lower, while with a higher constant such as 6, the size of the resulting target set it is higher, and this for the reasons related to the threshold explained above.
+
+**So obviously, the size of the resulting target set depends on the threshold function used.**
+
+These considerations made for the various threshold functions considered, are still valid even by varying the probability distribution function on which the initial partial removal of edges of the graph depends. Obviously, the numbers vary as the probability function changes. We note (referring to the graphics on one of the datasets considered for example "Twitch Dataset"):
+- Using constant values as probability on the edges, with a constant as low as 0.2 many edges are removed from the original graph, so the degree of the nodes consequently decreases (the communities are less tightly united), therefore the size of the resulting target set is smaller **(max TS size value = 1616)**. 
+- While, on the contrary, with the constant 0.6 a smaller number of edges are removed, so the degree of the nodes remains quite high (the communities remain fairly cohesive even after the removal of the edges), so the size of the resulting target set is larger **(max TS size value = 2529)**.
+- We saw that using a Random probability the number of edges is roughly halved (so it could be considered like a constant 0.5) as matter of fact the size of the resulting target is still large but less than previous one **(max TS size value = 2366)**.
+- Finally, by using a probability on the edges which is a function of the degree of the source and recipient nodes of each edge (details on previous section), we have a very high number of resulting edges, or rather very few edges are removed. Again, the cause is that nodes have a fairly high degree, which results in a fairly high probability on the edges, which means that most of the nodes influence each other a lot and, namely the communities are more united than in the other cases. Consequently the size of the resulting target set is the highest in this case **(max TS size value = 2902)**.
+
+***As before, these considerations are also true for the other datasets, with different number but the same proportion.**
 
 # Conclusions
+In this work we have implemented the Target Set Selection algorithm described in the paper cited in the bibliography which can have numerous fields of application, especially in viral marketing as explained in the introduction. We have analyzed the behavior of the algorithm running on 3 different datasets and we have carried out various tests by varying both the probability function on which the initial removal of graph edges depends, and the function that assigns thresholds to the nodes and we have noticed how the size of the the resulting target set depends mainly on the thresholds assigned to the nodes. If these are proportional to the degree of the nodes, in a dataset where there are nodes with a fairly high degree, we will have equally high thresholds. Namely we are in the presence of nodes that are hard-to-influence (communities firmly connected to each other) and it follows that the size of the resulting target set is very high. On the contrary, if we have fairly low threshold values ​​of the nodes and we remember that nodes with low thresholds are easy-to-influence nodes it follows that the size of the resulting target set is also low, meaning that, a small seed set can influence many nodes, in this case.
