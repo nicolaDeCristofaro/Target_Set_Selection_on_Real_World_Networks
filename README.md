@@ -25,7 +25,7 @@ This small number of individuals that constitutes the target set are called **se
 - Given G = (V,E) a graph that models the network
 - Given the function
 
-<div style="text-align:center"> <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;t&space;:&space;V&space;\rightarrow&space;\mathbb{N}_{0}&space;=&space;\left\{&space;0,1,...&space;\right\}" title="t : V \rightarrow \mathbb{N}_{0} = \left\{ 0,1,... \right\}" /> </div>
+<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;t&space;:&space;V&space;\rightarrow&space;\mathbb{N}_{0}&space;=&space;\left\{&space;0,1,...&space;\right\}" title="t : V \rightarrow \mathbb{N}_{0} = \left\{ 0,1,... \right\}" />
 
 assigning **tresholds** to the vertices of G. 
    
@@ -360,19 +360,33 @@ Below we show the results of the tests in graphics produced with "pyplot" of pyt
 
 **Result Discussion:**
 
-1. When we consider a **degree_based** threshold function with coefficients **(a=2,b=7)** for how the threshold of a node is computed, let's remember the formula:
+1. When we consider a **degree_based** threshold function with coefficients **(a=2,b=7)** for how the threshold of a node is computed, let's remember the formula we used:
 
+<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\inline&space;min\left\{&space;a&space;*&space;d(v)/b,&space;d(v)\right\}" title="\inline min\left\{ a * d(v)/b, d(v)\right\}" />
 
-this turns out to be a very small value in most cases.
+this turns out to be a very **small value in most cases**.
 
-*Example*
+*Example:*
+- Let's suppose the degree of a node v is **d(v) = 6**
 
-This is because from the statistics we have seen earlier on the datasets, nodes have a fairly high average rank, in particular 10 for the Twitch dataset and 6 for the other 2, but we have seen how the rank of a node can be much higher. high (max node degree stats).
+<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\inline&space;t(v)&space;=&space;min\left\{&space;a&space;*&space;d(v)/b,&space;d(v)\right\}&space;=&space;min\left\{&space;2&space;*&space;6/7,&space;6\right\}&space;=&space;min\left\{&space;1.7,&space;6\right\}&space;=&space;math.ceil(1.7)&space;=&space;2&space;" title="\inline t(v) = min\left\{ a * d(v)/b, d(v)\right\} = min\left\{ 2 * 6/7, 6\right\} = min\left\{ 1.7, 6\right\} = math.ceil(1.7) = 2 " />
+
+This is because from the statistics we have seen earlier on the datasets, nodes have a fairly high average degree, in particular 10 for the Twitch dataset and 6 for the other 2, but we have seen how the degree of a node can be much higher (see max node degree datasets stats).
 
 Consequently, in this situation, with these coefficients, when we go to calculate the minimum in the formula expressed above, the degree is almost never taken as a threshold value but in most cases the alternative is taken because it is a lower value.
 
-Therefore, since in this situation, in most cases we find ourselves with fairly low threshold values ​​of the nodes and we remember that nodes with low thresholds are easy to influence it follows that the size of the target set is very low, the lowest among the tested variants: a small seed set can influence many nodes
+Therefore, since in this situation, in most cases we find ourselves with fairly low threshold values ​​of the nodes and we remember that nodes with low thresholds are easy-to-influence nodes. It follows that the size of the target set is very low, the lowest among the tested variants, meaning that, a small seed set can influence many nodes, in this case.
 
+2.On the contrary, when we consider a **degree_based** threshold function with coefficients **(a=1,b=1)** for how the threshold of a node is computed this turns out to be **equal to the degree of the node in most cases**.
 
+*Example:*
+- Let's suppose the degree of a node v is **d(v) = 6**
+
+<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\inline&space;t(v)&space;=&space;min\left\{&space;a&space;*&space;d(v)/b,&space;d(v)\right\}&space;=&space;min\left\{&space;1&space;*&space;6/1,&space;6\right\}&space;=&space;min\left\{&space;6,&space;6\right\}&space;=&space;6&space;" title="\inline t(v) = min\left\{ a * d(v)/b, d(v)\right\} = min\left\{ 1 * 6/1, 6\right\} = min\left\{ 6, 6\right\} = 6 " />
+
+As we said before, given that nodes have a fairly high degree the threshold values are equally high, in most cases.
+And remember that nodes with high threshold values are hard-to-influence nodes. 
+
+It follows that the size of the resulting target set is very high, the highest among the variants tested and this shows that the presence of nodes with a high degree, therefore of communities "firmly" connected to each other, slows down the diffusion process, that is you need to have a very large initial seed set to affect all nodes with this threshold setting.
 
 # Conclusions
