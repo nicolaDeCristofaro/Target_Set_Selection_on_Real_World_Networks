@@ -13,7 +13,7 @@ else:
     sys.exit("Dataset path has to be specified")
 
 #datasetPaths = ['./Datasets/Arxiv_GR-QC/CA-GrQc.txt', './Datasets/Arxiv_HEP-TH/CA-HepTh.txt']
-threshold_const = [0,1,2,3,4,5,6,7,8,9,10]
+threshold_const = [1,2,3,4,5,6,7,8,9,10]
 
 #To check algorithm correctness we execute TSS algorithms (without considering probability on edges)
 #  on some datasets experimented on paper, so we expect the same results 

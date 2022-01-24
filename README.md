@@ -185,19 +185,15 @@ def target_set_selection(graph, node_threshold_mapping):
         node_id_to_add_to_ts = None
 
         for v in graph.Nodes():
-            #CASE 1:if exists a node with threshold == 0 it is already active so It influences other nodes in its neighbourhood
-            #and then delete it from the network 
+            #CASE 1
             if node_threshold_mapping[v.GetId()] == 0: 
                 active_ready_set.add(v.GetId())
             else:
                 if v.GetDeg() < node_threshold_mapping[v.GetId()]:
-                    #CASE 2:it exists a node that has the degree < of its threshold
-                    #so add it to the target set S because having a few link nobody can influence it
-                    #and then delete it from the network 
+                    #CASE 2 
                     node_id_to_add_to_ts = v.GetId()
                 else:
-                    #CASE 3:pick a nod v with the selected criteria, decrement of 1 its threshold neighborhoods
-                    #and then delete it from the network
+                    #CASE 3
                     denominator = v.GetDeg()*(v.GetDeg()+1)
                     if denominator == 0: ratio = 0
                     else: ratio = node_threshold_mapping[v.GetId()] / denominator
@@ -229,7 +225,10 @@ def target_set_selection(graph, node_threshold_mapping):
                 graph.DelNode(max_node_id)
 
     return S
-``` 
+```
+
+We can notice the use of the function **"GetNodesAtHop(StartNId, Hop, IsDir)"** provided by SNAP library that is a graph method that finds the node ids of all the nodes that are at distance *Hop* from node *StartNId*. The parameter *isDir* indicates whether the edges should be considered directed (True) or undirected (False), like in this case. The function returns the number of nodes found (that is not needed in this case) and *NIdV* a vector of ints, namely node ids of nodes Hop distance away from StartNId.
+
 
 ## Notes on probabilistic nature
 Because of the initial edge pre-computation, that removes edges from the graph, is based on probability, in two different iterations of the algorithm we can end up with slightly different solutions. This is because a certain number of edges may be removed in one iteration and a slightly different number in the other.
@@ -296,7 +295,7 @@ In fact, we can see, for each dataset, the number of edges by applying a constan
 
 <img src="graphics/edges_precomputation_comparison.png"/>
 
-What do we notice?
+*What do we notice?*
 - Using constant values as probability on the edges, what we expect happens, that is with a constant as low as 0.2 many edges are removed from the original graph while with the constant 0.6 a smaller number of edges are removed.
 - Using a Random probability we notice how the number of edges is roughly halved.
 - Finally we note that by using a probability on the edges which is a function of the degree of the source and recipient nodes of each edge, we have a very high number of resulting edges, or rather very few edges are removed. This indicates that the nodes have a fairly high degree, which results in a fairly high probability on the edges which means that most of the nodes influence each other a lot. Practically it means that the pseudorandom number generated is almost never able to be greater and consequently very few edges are removed.
@@ -328,6 +327,22 @@ The combination of these functions results in 16 tests on each dataset. In parti
 | graphic 2 	| Constant 0.6         	| 1.Constant = 2 <br> 2.Constant = 6 <br> 3.Degree_based (a=1, b=1) <br> 4.Degree_based (a=2, b=7) <br> 	|
 | graphic 3 	| Random               	| 1.Constant = 2 <br> 2.Constant = 6 <br> 3.Degree_based (a=1, b=1) <br> 4.Degree_based (a=2, b=7) <br> 	|
 | graphic 4 	| Degree_based         	| 1.Constant = 2 <br> 2.Constant = 6 <br> 3.Degree_based (a=1, b=1) <br> 4.Degree_based (a=2, b=7) <br> 	|
+
+***The standard output of the tests, for each dataset, can be found in "tests_output" folder**
+
+Below we show the results of the tests in graphics produced with "pyplot" of python.
+
+- **DATASET: musae-twitch** <br>
+<img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_0.png" width="400"/> <img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_1.png" width="400"/>
+
+- **DATASET: ca-GrQc**
+
+
+- **DATASET: ca-HepTh**
+
+*What do we notice?*
+- The first thing we can notice is that in all tests, on all datasets, although the resulting target set size is different, the same proportion is maintained as the threshold function varies.
+
 
 
 # Conclusions
