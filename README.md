@@ -332,8 +332,10 @@ The combination of these functions results in 16 tests on each dataset. In parti
 
 Below we show the results of the tests in graphics produced with "pyplot" of python.
 
+***The first thing to notice is that in all tests, on all datasets, although the resulting target set size is different, the same proportion is maintained as the threshold function varies. Therefore, the considerations made are valid regardless of the dataset considered in these experiments.**
+
 - **DATASET: musae-twitch** <br>
-<img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_0.png" width="400"/> <img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_1.png" width="400"/>
+<img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_0.png"/> <img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_1.png"/>
 
 - **DATASET: ca-GrQc**
 
@@ -341,7 +343,8 @@ Below we show the results of the tests in graphics produced with "pyplot" of pyt
 - **DATASET: ca-HepTh**
 
 *What do we notice?*
-- The first thing we can notice is that in all tests, on all datasets, although the resulting target set size is different, the same proportion is maintained as the threshold function varies.
+-
+-
 
 
 
