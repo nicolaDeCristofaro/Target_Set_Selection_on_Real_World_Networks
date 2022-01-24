@@ -20,7 +20,7 @@ This small number of individuals that constitutes the target set are called **se
 
 **Our problem is to minimize the number of seeds, in other words we want to find the minimum target set for which we will be able to influence the entire network.**
 
-<img src="./TSS_image.png" width="300" height="437"/>
+<img src=".images//TSS_image.png" width="300" height="437"/>
 
 # Formalization of the problem
 **Instance:**
@@ -29,7 +29,7 @@ This small number of individuals that constitutes the target set are called **se
 
 <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;t&space;:&space;V&space;\rightarrow&space;\mathbb{N}_{0}&space;=&space;\left\{&space;0,1,...&space;\right\}" title="t : V \rightarrow \mathbb{N}_{0} = \left\{ 0,1,... \right\}" />
 
-assigning **tresholds** to the vertices of G. 
+assigning **thresholds** to the vertices of G. 
    
    *What do the thresholds represent?* For each node v ∈ V, the value **t(v)** quantifies how hard it is to influence node v, in the sense that easy-to-influence nodes of the network have “low” threshold values, and hard-to-influence nodes have “high” threshold values.
 
@@ -54,7 +54,7 @@ We apply the principle of deferred decision: for each edge of the graph a pseudo
 # Implementation
 Below we explain the implementation of the algorithm and the implementation choices (we refer to the python file "TSS_execution.py").
 
-1. The first step is about taking parameters from command line regarding the the probability function to be used as well as that of thresholds with the values of the constants if they are necessary.
+1. The first step is about taking parameters from command line regarding the probability function to be used as well as that of thresholds with the values of the constants if they are necessary.
 
 2. The second step is to load the graph that models the dataset we are using.
 
@@ -177,7 +177,7 @@ Below I make a brief description in words of the algorithm whose code is shown n
 
 We want to select a node v of the graph and eliminate it from the graph following the rules below:
 - **CASE 1**: node v has threshold t (v) = 0 which means that the current set of nodes in S are able to activate v. In this case it will affect its neighboring nodes once active and then it can be eliminated from the graph.
-- **CASE 2**: node v has a lower degree than its threshold, so in this case the node v must be nbecessarily added to the current solution set S since there is no possibility to activate v through its neighbors, in other words, having a few link nobody can influence it. Coherently, its neighbors’ thresholds are decreased by 1, since they receive v’s influence. Once a node is added to S, it is deleted from the graph.
+- **CASE 2**: node v has a lower degree than its threshold, so in this case the node v must be becessarily added to the current solution set S since there is no possibility to activate v through its neighbors, in other words, having a few links nobody can influence it. Coherently, its neighbors’ thresholds are decreased by 1, since they receive v’s influence. Once a node is added to S, it is deleted from the graph.
 - **CASE 3**: if the above cases do not occur Case 3
 holds and a vertex is selected to be discarded; such a vertex is chosen as to maximize a properly chosen function that, for each node, is directly proportional to its remaining threshold and inversely proportional to its degree.
 
@@ -253,7 +253,7 @@ So to make our solution have value we will carry out the steps described above f
 
 You can run the python file "TSS_execution.py" to execute the implemented algorithm. You should specify as parameters:
   - the dataset path in your local machine
-  - the probability distribution function you want use (if constant you shold also add the constant)
+  - the probability distribution function you want use (if constant you should also add the constant)
   - the threshold function to use (with constant or coefficient a,b depending on what function you use)
   Here is an example:
 
@@ -262,6 +262,11 @@ python3 TSS_execution.py ./Datasets/Arxiv_GR-QC/CA-GrQc.txt constant 0.2 degree_
 ```
 
 # Computational Complexity
+In the paper indicated in the bibliography it is shown in detail how the proposed TSS algorithm produces an optimal solution (polynomial time) if the input graph is a tree, a cycle or a clique.
+
+In addition it is also given and proved an upper bound on the size of the resulting Target Set:
+
+<img src="./images/upper_bound_TSS_size.png"/>
 
 
 # Datasets
@@ -269,8 +274,8 @@ To carry out the tests on the implemented algorithm, the datasets provided by SN
 
 The following datasets were used:
 - **Twitch Social Networks:** in this dataset nodes are the users of Twitch Social Network and the links are mutual friendships between them. These social networks data were collected in May 2018 and they are organized depending on the language used by users (we consider the ENG variant).
-- **General Relativity and Quantum Cosmology collaboration network (ca-GrQc):** a collaboration network that covers scientific collaborations between authors papers submitted to General Relativity and Quantum Cosmology category. If an author i co-authored a paper with author j, the graph contains a undirected edge from i to j.
-- **High Energy Physics - Theory collaboration network (ca-HepTh):** a collaboration network that covers scientific collaborations between authors papers submitted to High Energy Physics - Theory category. If an author i co-authored a paper with author j, the graph contains a undirected edge from i to j. 
+- **General Relativity and Quantum Cosmology collaboration network (ca-GrQc):** a collaboration network that covers scientific collaborations between authors papers submitted to General Relativity and Quantum Cosmology category. If an author i co-authored a paper with author j, the graph contains an undirected edge from i to j.
+- **High Energy Physics - Theory collaboration network (ca-HepTh):** a collaboration network that covers scientific collaborations between authors papers submitted to High Energy Physics - Theory category. If an author i co-authored a paper with author j, the graph contains an undirected edge from i to j. 
 
 Here are some statistics on the datasets used:
 
@@ -300,21 +305,21 @@ First of all, tests were carried out to understand how the choice of the probabi
 
 From the following graphic we can see, for each dataset considered, the number of edges on the original graph and then how this number is reduced following the removal of the edges after applying the deferred decision principle. 
 
-In fact, we can see, for each dataset, the number of edges by applying a constant probability on the edges of 0.2, then constant of 0.6, then again a random probability and finally a probability that depends on the degree of the source node and recipient node of the edges considered(details seen in above sections).
+In fact, we can see, for each dataset, the number of edges by applying a constant probability on the edges of 0.2, then constant of 0.6, then again a random probability and finally a probability that depends on the degree of the source node and recipient node of the edges considered (details seen in above sections).
 
 <img src="graphics/edges_precomputation_comparison.png"/>
 
 *What do we notice?*
 - Using constant values as probability on the edges, what we expect happens, that is with a constant as low as 0.2 many edges are removed from the original graph while with the constant 0.6 a smaller number of edges are removed.
-- Using a Random probability we notice how the number of edges is roughly halved.
-- Finally we note that by using a probability on the edges which is a function of the degree of the source and recipient nodes of each edge, we have a very high number of resulting edges, or rather very few edges are removed. This indicates that the nodes have a fairly high degree, which results in a fairly high probability on the edges which means that most of the nodes influence each other a lot. Practically it means that the pseudorandom number generated is almost never able to be greater and consequently very few edges are removed.
+- Using a Random probability, we notice how the number of edges is roughly halved.
+- Finally, we note that by using a probability on the edges which is a function of the degree of the source and recipient nodes of each edge, we have a very high number of resulting edges, or rather very few edges are removed. This indicates that the nodes have a fairly high degree, which results in a fairly high probability on the edges which means that most of the nodes influence each other a lot. Practically it means that the pseudorandom number generated is almost never able to be greater and consequently very few edges are removed.
 
 These considerations can be made for all 3 datasets considered.
 
 ## TSS tests
 In this section we'll make various tests on TSS algorithm implemented on the datasets specified before.
 
-For each dataset we execute "TSS_test_and_graphics_generation.py" giving as parameter the dataset path. Then automatically will be perfomed tests on that dataset varying the probability functions and the threshold functions.
+For each dataset we execute "TSS_test_and_graphics_generation.py" giving as parameter the dataset path. Then automatically will be performed tests on that dataset varying the probability functions and the threshold functions.
 
 **Probability functions considered**:
 - Constant = 0.2
@@ -407,7 +412,7 @@ These considerations made for the various threshold functions considered, are st
 ***As before, these considerations are also true for the other datasets, with different number but the same proportion.**
 
 # Conclusions
-In this work we have implemented the Target Set Selection algorithm described in the paper cited in the bibliography which can have numerous fields of application, especially in viral marketing as explained in the introduction. We have analyzed the behavior of the algorithm running on 3 different datasets and we have carried out various tests by varying both the probability function on which the initial removal of graph edges depends, and the function that assigns thresholds to the nodes and we have noticed how the size of the the resulting target set depends mainly on the thresholds assigned to the nodes. If these are proportional to the degree of the nodes, in a dataset where there are nodes with a fairly high degree, we will have equally high thresholds. Namely we are in the presence of nodes that are hard-to-influence (communities firmly connected to each other) and it follows that the size of the resulting target set is very high. On the contrary, if we have fairly low threshold values ​​of the nodes and we remember that nodes with low thresholds are easy-to-influence nodes it follows that the size of the resulting target set is also low, meaning that, a small seed set can influence many nodes, in this case.
+In this work we have implemented the Target Set Selection algorithm described in the paper cited in the bibliography which can have numerous fields of application, especially in viral marketing as explained in the introduction. We have analyzed the behavior of the algorithm running on 3 different datasets and we have carried out various tests by varying both the probability function on which the initial removal of graph edges depends, and the function that assigns thresholds to the nodes and we have noticed how the size of the resulting target set depends mainly on the thresholds assigned to the nodes. If these are proportional to the degree of the nodes, in a dataset where there are nodes with a fairly high degree, we will have equally high thresholds. Namely we are in the presence of nodes that are hard-to-influence (communities firmly connected to each other) and it follows that the size of the resulting target set is very high. On the contrary, if we have fairly low threshold values ​​of the nodes and we remember that nodes with low thresholds are easy-to-influence nodes it follows that the size of the resulting target set is also low, meaning that, a small seed set can influence many nodes, in this case.
 
 # Bibliography
 - Cordasco, G., Gargano, L., Mecchia, M. et al. Discovering Small Target Sets in Social Networks: A Fast and Effective Algorithm. Algorithmica 80, 1804–1833 (2018). https://doi.org/10.1007/s00453-017-0390-5
