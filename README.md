@@ -20,6 +20,8 @@ This small number of individuals that constitutes the target set are called **se
 
 **Our problem is to minimize the number of seeds, in other words we want to find the minimum target set for which we will be able to influence the entire network.**
 
+<img src="./TSS_image.png"/>
+
 # Formalization of the problem
 **Instance:**
 - Given G = (V,E) a graph that models the network
@@ -406,3 +408,6 @@ These considerations made for the various threshold functions considered, are st
 
 # Conclusions
 In this work we have implemented the Target Set Selection algorithm described in the paper cited in the bibliography which can have numerous fields of application, especially in viral marketing as explained in the introduction. We have analyzed the behavior of the algorithm running on 3 different datasets and we have carried out various tests by varying both the probability function on which the initial removal of graph edges depends, and the function that assigns thresholds to the nodes and we have noticed how the size of the the resulting target set depends mainly on the thresholds assigned to the nodes. If these are proportional to the degree of the nodes, in a dataset where there are nodes with a fairly high degree, we will have equally high thresholds. Namely we are in the presence of nodes that are hard-to-influence (communities firmly connected to each other) and it follows that the size of the resulting target set is very high. On the contrary, if we have fairly low threshold values ​​of the nodes and we remember that nodes with low thresholds are easy-to-influence nodes it follows that the size of the resulting target set is also low, meaning that, a small seed set can influence many nodes, in this case.
+
+# Bibliography
+- Cordasco, G., Gargano, L., Mecchia, M. et al. Discovering Small Target Sets in Social Networks: A Fast and Effective Algorithm. Algorithmica 80, 1804–1833 (2018). https://doi.org/10.1007/s00453-017-0390-5
