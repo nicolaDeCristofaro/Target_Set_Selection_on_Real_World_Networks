@@ -20,7 +20,7 @@ This small number of individuals that constitutes the target set are called **se
 
 **Our problem is to minimize the number of seeds, in other words we want to find the minimum target set for which we will be able to influence the entire network.**
 
-<img src="./TSS_image.png" width="228" height="437"/>
+<img src="./TSS_image.png" width="300" height="437"/>
 
 # Formalization of the problem
 **Instance:**
