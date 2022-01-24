@@ -25,7 +25,7 @@ This small number of individuals that constitutes the target set are called **se
 - Given G = (V,E) a graph that models the network
 - Given the function
 
-<div style="text-align:center"> <img src="./images/t_formula.svg" /> </div>
+<div style="text-align:center"> <img src="https://latex.codecogs.com/png.image?\dpi{110}&space;t&space;:&space;V&space;\rightarrow&space;\mathbb{N}_{0}&space;=&space;\left\{&space;0,1,...&space;\right\}" title="t : V \rightarrow \mathbb{N}_{0} = \left\{ 0,1,... \right\}" /> </div>
 
 assigning **tresholds** to the vertices of G. 
    
