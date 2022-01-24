@@ -23,7 +23,7 @@ This small number of individuals that constitutes the target set are called **se
 # Formalization of the problem
 **Instance:**
 - Given G = (V,E) a graph that models the network
-- Given the function <img src="https://latex.codecogs.com/svg.image?t&space;:&space;V&space;\rightarrow&space;\mathbb{N}_{0}&space;=&space;\left\{&space;0,1,...&space;\right\}" title="t : V \rightarrow \mathbb{N}_{0} = \left\{ 0,1,... \right\}" /> assigning **tresholds** to the vertices of G. 
+- Given the function <img src="https://latex.codecogs.com/svg.image?\bg_white&space;t&space;:&space;V&space;\rightarrow&space;\mathbb{N}_{0}&space;=&space;\left\{&space;0,1,...&space;\right\}" title="\bg_white t : V \rightarrow \mathbb{N}_{0} = \left\{ 0,1,... \right\}" /> assigning **tresholds** to the vertices of G. 
    
    *What do the thresholds represent?* For each node v ∈ V, the value **t(v)** quantifies how hard it is to influence node v, in the sense that easy-to-influence nodes of the network have “low” threshold values, and hard-to-influence nodes have “high” threshold values.
 
@@ -335,16 +335,39 @@ Below we show the results of the tests in graphics produced with "pyplot" of pyt
 ***The first thing to notice is that in all tests, on all datasets, although the resulting target set size is different, the same proportion is maintained as the threshold function varies. Therefore, the considerations made are valid regardless of the dataset considered in these experiments.**
 
 - **DATASET: musae-twitch** <br>
-<img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_0.png"/> <img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_1.png"/>
+<img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_0.png"/> 
+<img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_1.png"/>
+<img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_2.png"/>
+<img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_3.png"/>
 
-- **DATASET: ca-GrQc**
+- **DATASET: ca-GrQc** <br>
+<img src="./graphics/algorithm_execution/CA-GrQc/CA-GrQcavg_ts_size_0.png"/>
+<img src="./graphics/algorithm_execution/CA-GrQc/CA-GrQcavg_ts_size_1.png"/>
+<img src="./graphics/algorithm_execution/CA-GrQc/CA-GrQcavg_ts_size_2.png"/>
+<img src="./graphics/algorithm_execution/CA-GrQc/CA-GrQcavg_ts_size_3.png"/>
+
+- **DATASET: ca-HepTh** <br>
+<img src="./graphics/algorithm_execution/CA-HepTh/CA-HepThavg_ts_size_0.png"/>
+<img src="./graphics/algorithm_execution/CA-HepTh/CA-HepThavg_ts_size_1.png"/>
+<img src="./graphics/algorithm_execution/CA-HepTh/CA-HepThavg_ts_size_2.png"/>
+<img src="./graphics/algorithm_execution/CA-HepTh/CA-HepThavg_ts_size_3.png"/>
+
+**If the graphic images are not clearly visible they can be found in "graphics" folder for a better visualization.*
+
+**Result Discussion:**
+
+1. When we consider a **degree_based** threshold function with coefficients **(a=2,b=7)** for how the threshold of a node is computed, let's remember the formula:
 
 
-- **DATASET: ca-HepTh**
+this turns out to be a very small value in most cases.
 
-*What do we notice?*
--
--
+*Example*
+
+This is because from the statistics we have seen earlier on the datasets, nodes have a fairly high average rank, in particular 10 for the Twitch dataset and 6 for the other 2, but we have seen how the rank of a node can be much higher. high (max node degree stats).
+
+Consequently, in this situation, with these coefficients, when we go to calculate the minimum in the formula expressed above, the degree is almost never taken as a threshold value but in most cases the alternative is taken because it is a lower value.
+
+Therefore, since in this situation, in most cases we find ourselves with fairly low threshold values ​​of the nodes and we remember that nodes with low thresholds are easy to influence it follows that the size of the target set is very low, the lowest among the tested variants: a small seed set can influence many nodes
 
 
 
