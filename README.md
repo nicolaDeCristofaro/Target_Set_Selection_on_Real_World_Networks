@@ -35,7 +35,6 @@ assigning **thresholds** to the vertices of G.
 
 **Problem:**
 *Find a target set S ⊆ V of minimum size for G*
-Dato un grafo non direzionato G=(V,E)
 
 **Extra Requirement:**
 Instead of considering all the edges of the graph that models the network, we want to consider a subset of them. How? Let us consider a probability distribution associated with the edges of our graph G:
