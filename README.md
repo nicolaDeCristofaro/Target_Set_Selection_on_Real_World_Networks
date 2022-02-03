@@ -1,14 +1,4 @@
-<p align="center">
-  <h2 align="center">Target Set Selection on Social Networks</h2>
-    <br>
-  <p align="center">
-    <b>Nicola De Cristofaro - 0522500876</b><br>
-    Social Networks course project <br>
-	  Department of Computer Science, Master's Degree, Cloud Computing curriculum <br>
-	  University of Salerno <br>
-    Email: n.decristofaro2@studenti.unisa.it  
-  </p>
-</p>
+<h2 align="center">Target Set Selection on Social Networks</h2>
 
 # Problem Description
 The phenomenon of social influence has been extensively studied as it can bring benefits in different contexts. Social Influence is the process by which individuals adjust their opinions, revise their belief, or change their behaviours as a result of interactions with other people. In particular, this process has gained a lot of interest from advertisers to exploit "viral marketing" namely the spread of information about products and their adoption by people.
