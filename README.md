@@ -1,6 +1,4 @@
-<h2 align="center">Target Set Selection on Social Networks</h2>
-
-# Problem Description
+# Target Set Selection: Problem Description
 The phenomenon of social influence has been extensively studied as it can bring benefits in different contexts. Social Influence is the process by which individuals adjust their opinions, revise their belief, or change their behaviours as a result of interactions with other people. In particular, this process has gained a lot of interest from advertisers to exploit "viral marketing" namely the spread of information about products and their adoption by people.
 
 In the context of viral marketing, the problem could be stated as follow: 
@@ -339,23 +337,8 @@ Below we show the results of the tests in graphics produced with "pyplot" of pyt
 
 - **DATASET: musae-twitch** <br>
 <img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_0.png"/> 
-<img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_1.png"/>
-<img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_2.png"/>
-<img src="./graphics/algorithm_execution/musae_ENGB_edges/musae_ENGB_edgesavg_ts_size_3.png"/>
 
-- **DATASET: ca-GrQc** <br>
-<img src="./graphics/algorithm_execution/CA-GrQc/CA-GrQcavg_ts_size_0.png"/>
-<img src="./graphics/algorithm_execution/CA-GrQc/CA-GrQcavg_ts_size_1.png"/>
-<img src="./graphics/algorithm_execution/CA-GrQc/CA-GrQcavg_ts_size_2.png"/>
-<img src="./graphics/algorithm_execution/CA-GrQc/CA-GrQcavg_ts_size_3.png"/>
-
-- **DATASET: ca-HepTh** <br>
-<img src="./graphics/algorithm_execution/CA-HepTh/CA-HepThavg_ts_size_0.png"/>
-<img src="./graphics/algorithm_execution/CA-HepTh/CA-HepThavg_ts_size_1.png"/>
-<img src="./graphics/algorithm_execution/CA-HepTh/CA-HepThavg_ts_size_2.png"/>
-<img src="./graphics/algorithm_execution/CA-HepTh/CA-HepThavg_ts_size_3.png"/>
-
-**If the graphic images are not clearly visible they can be found in "graphics" folder for a better visualization.*
+This is an example of graphic produced. For all the graphics and tests output look at the "graphics" folder.
 
 **Result Discussion:**
 
